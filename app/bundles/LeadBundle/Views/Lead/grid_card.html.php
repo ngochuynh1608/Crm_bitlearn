@@ -16,7 +16,7 @@ if (empty($color)) {
 
 $img = $view['lead_avatar']->getAvatar($contact);
 ?>
-<div class="shuffle shuffle-item grid col-sm-6 col-lg-4 contact-cards">
+<div class="shuffle shuffle-item grid col-sm-6 col-lg-6 contact-cards">
     <div data-color="#<?php echo $color; ?>" class="panel<?php if (!empty($highlight)) {
     echo ' highlight';
 } ?> card ovf-h" style="border-top: 3px solid #<?php echo $color; ?>;">
@@ -42,6 +42,12 @@ $img = $view['lead_avatar']->getAvatar($contact);
                     </h4>
                     <div class="text-muted mb-1 ellipsis">
                         <i class="fa fa-fw fa-building mr-xs"></i><?php echo (!empty($fields['core']['company'])) ? $fields['core']['company']['value'] : ''; ?>
+                    </div>
+                    <div class="text-muted mb-1 ellipsis">
+                        <i class="fa fa-fw fa-phone mr-xs"></i><?php echo (!empty($fields['core']['mobile'])) ? $fields['core']['mobile']['value'] : ''; ?>
+                    </div>
+                    <div class="text-muted mb-1 ellipsis">
+                        <i class="fa fa-fw fa-envelope mr-xs"></i><?php echo (!empty($fields['core']['email'])) ? $fields['core']['email']['value'] : ''; ?>
                     </div>
                     <div class="text-muted mb-1 ellipsis">
                         <i class="fa fa-fw fa-map-marker mr-xs"></i><?php
